@@ -95,7 +95,7 @@ app.get('/' , (req , res)=>{
 
 const personRoutes = require('./routes/personRoutes');
 app.use('/person', personRoutes);
-
+// Sample :  hello world
 app.listen(PORT , (res)=>{
     console.log(`Listening on ${PORT}`);
 })
