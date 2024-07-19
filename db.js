@@ -8,7 +8,8 @@ const mongoose = require('mongoose');       // Act as a Bridge between node and 
 // Reason : localhost can sometimes resolve to an IPv6 address (::1), which MongoDB might not be listening on.
 // 127.0.0.1 always resolves to an IPv4 address, which MongoDB is more likely to be listening on.
 
-const mongoURL = "mongodb://127.0.0.1:27017/mydatabase"  //  "Replace mydatabse with anything"
+// const mongoURL = "mongodb://127.0.0.1:27017/mydatabase"  //  "Replace mydatabse with anything"
+const mongoURL = process.env.MONGO_URL
 
 // set up mongoDB connection
 // mongoose.connect(mongoURL , {
